@@ -33,7 +33,7 @@
             android:contentDescription="@null"
             android:maxHeight="32dp"
             android:maxWidth="32dp"
-            android:src="@drawable/search_publications_search_icon" />
+            android:src="@drawable/search_icon" />
 
         <EditText
             android:id="@+id/search_et"
