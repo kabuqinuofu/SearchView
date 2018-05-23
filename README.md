@@ -1,5 +1,6 @@
 # SearchView
 仿微信发起群聊，选择联系人上方搜索效果
+
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 <img src="image/image_001.png" />
