@@ -292,6 +292,17 @@ public class SmoothSearchView extends LinearLayout {
     }
 
     /**
+     * 设置搜索框提示文本
+     *
+     * @param text
+     */
+    public void setSearchHintText(String text) {
+        if (this.mSearchEt != null) {
+            this.mSearchEt.setHint(text);
+        }
+    }
+
+    /**
      * 设置搜索框文本提示字体颜色
      *
      * @param color
