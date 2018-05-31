@@ -44,6 +44,8 @@ public class SmoothSearchView extends LinearLayout {
 
     private TextWatcher mTextWatcher;   // 文本观察者
 
+    private boolean isShowSearchIcon;
+
     public SmoothSearchView(Context context) {
         this(context, null);
     }
@@ -164,7 +166,7 @@ public class SmoothSearchView extends LinearLayout {
         });
 
         if (this.mViewMap.size() > 0) {
-            this.mSearchIconView.setVisibility(View.GONE);    // 隐藏搜索框提示图标
+            this.mSearchIconView.setVisibility(isShowSearchIcon ? VISIBLE : View.GONE);    // 隐藏搜索框提示图标
         }
 
         iconView.setOnClickListener(new OnClickListener() {
@@ -341,4 +343,12 @@ public class SmoothSearchView extends LinearLayout {
             this.mSearchIconView.setVisibility(VISIBLE);
         }
     }
+
+    /**
+     * 显示搜索框前面的提示图标
+     */
+    public void isShowSearchHintIcon(boolean isShow) {
+        this.isShowSearchIcon = isShow;
+    }
+
 }
