@@ -38,7 +38,7 @@ public class MinWidthLinearLayout extends LinearLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         this.mTotalWidth = MeasureSpec.getSize(widthMeasureSpec);
-        this.mEditTextMinWidth = (int) (this.mTotalWidth * 0.2);
+        this.mEditTextMinWidth = (int) (this.mTotalWidth * 0.21);
 
         if (getChildCount() == 2) {
             View childView0 = getChildAt(0);
@@ -47,8 +47,8 @@ public class MinWidthLinearLayout extends LinearLayout {
             int childView0Width = childView0.getMeasuredWidth();
 
             if (this.mTotalWidth - childView0Width < this.mEditTextMinWidth) {
-                childView0.measure(MeasureSpec.makeMeasureSpec(mTotalWidth - mEditTextMinWidth, MeasureSpec.EXACTLY), 0);
-                childView1.measure(MeasureSpec.makeMeasureSpec(mEditTextMinWidth, MeasureSpec.EXACTLY), 0);
+                childView0.measure(MeasureSpec.makeMeasureSpec(mTotalWidth - mEditTextMinWidth, MeasureSpec.EXACTLY), heightMeasureSpec);
+                childView1.measure(MeasureSpec.makeMeasureSpec(mEditTextMinWidth, MeasureSpec.EXACTLY), heightMeasureSpec);
             }
         }
     }
