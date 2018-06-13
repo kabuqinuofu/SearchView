@@ -58,7 +58,9 @@ public class MinWidthLinearLayout extends LinearLayout {
         if (getChildCount() == 2) {
             View childView0 = getChildAt(0);
             View childView1 = getChildAt(1);
+
             int childView0Width = childView0.getMeasuredWidth();
+
             if (this.mTotalWidth - childView0Width < this.mEditTextMinWidth) {
                 childView0.layout(l, t, l + this.mTotalWidth - this.mEditTextMinWidth, b);
                 childView1.layout(r - this.mEditTextMinWidth, t, r, b);
