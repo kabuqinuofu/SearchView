@@ -33,6 +33,10 @@
             android:contentDescription="@null"
             android:maxHeight="32dp"
             android:maxWidth="32dp"
+            android:paddingEnd="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="0dp"
+            android:paddingStart="8dp"
             android:src="@drawable/search_icon" />
 
         <EditText
